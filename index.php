@@ -16,7 +16,11 @@ $f3 = Base::instance();
 //define a default root andrewhinkson.greenriverdev.com/328/hello-fat-free/
 $f3->route('GET /', function()
 {
-    echo '<h1>Hello Fat-Free!</h1>';
+    //echo '<h1>Hello Fat-Free!</h1>';
+
+    //Render a view page
+    $view = new Template();
+    echo $view->render('views/home.html');
 });
 
 // Run fat-free
